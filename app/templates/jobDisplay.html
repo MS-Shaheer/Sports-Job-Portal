@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ job.post }}{% endblock %}
+
+{% block body %}
+
+<img src="../static/images/jobImage.jpg" alt="Shamie Job Portal Image" class="img-responsive titleImage">
+<div class="container">
+    <h1 class="text-center mt-2 mb-4">Shamie's Sports Job Portal</h1>
+    <h3 class="mb-2">Job Title</h3>
+    <p>{{ job.post }}</p>
+    <h4>Location</h4>
+    <p class="lead">{{ job.location }}</p>
+    <h4>Responsibilities</h4>
+    <p>{{ job.responsibilities }}</p>
+    <h4>Requirements</h4>
+    <p>{{ job.requirements }}</p>
+    <h4>Salary</h4>
+    <p>{{ job.salary }}</p>
+
+    {% include 'application.html' %}
+
+</div>
+
+{% endblock %}

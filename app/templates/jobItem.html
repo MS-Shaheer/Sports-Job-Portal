@@ -1,0 +1,17 @@
+<div class="jobMargin border-bottom row">
+    <div class="col-9 mb-2">
+        <h3 class="mt-4">{{ job.post }}</h3>
+        <div class="jobPostText">
+            <h6><b>Location:</b> {{ job.location }}</h6>
+        </div>
+        {% if 'salary' in job %}
+        <div class="jobPostText">
+            <h6><b>Salary:</b> {{ job.salary }}</h6>
+        </div>
+        {% endif %}
+    </div>
+    <div class="col-3 mt-5">
+        <!-- <a href="mailto:b18101083.mohdshamoilsultan@gmail.com?subject:Application for {{ job.post }}" class="btn btn-outline-primary float-right align-middle" type="button">APPLY</a> -->
+        <a href="/job/{{job.id}}" class="btn btn-outline-primary float-right align-middle" type="button">APPLY</a>
+    </div>
+</div>

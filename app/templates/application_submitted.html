@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %} Application Submitted {% endblock %}
+
+{% block body %}
+
+<img src="../static/images/jobImage.jpg" alt="Shamie Job Portal Image" class="img-responsive titleImage">
+<div class="container">
+    <h1 class="text-center mt-2 mb-4">Shamie's Sports Job Portal</h1>
+    <h3>Thank You! Your application for <b>{{ job.post }}</b> has been submitted with the following information.</h3>
+    <br>
+    <h4>Your Name</h4>
+    <p class="lead m-2">{{ application.name }}</p>
+    <h4>Your Email</h4>
+    <p class="m-2">{{ application.email }}</p>
+    <h4>Your Linkedin URL</h4>
+    <p class="m-2">{{ application.linkedin }}</p>
+    <h4>Your Education</h4>
+    <p class="m-2">{{ application.education }}</p>
+    <h4>Your Work Experience</h4>
+    <p class="m-2">{{ application.work }}</p>
+</div>
+
+{% endblock %}

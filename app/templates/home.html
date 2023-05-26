@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+<img src="../static/images/jobImage.jpg" alt="Shamie Job Portal Image" class="img-responsive titleImage">
+<div class="container">
+    <h1 class="text-center mt-2 mb-4">Shamie's Sports Job Portal</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="lead">
+                The Shamie Job Portal App is a user-friendly platform designed to simplify the job search process. It allows job seekers to explore a wide range of job opportunities and connect with potential employers. With an intuitive interface, users can easily search for jobs based on location, industry, and job title. With messaging capabilities, users can communicate with employers seamlessly. The Shamie Job Portal App aims to facilitate efficient job matching and enhance the overall job search experience.
+            </p>
+        </div>
+        <div class="col-md-6 d-none d-md-block">
+            <img src="../static/images/jonImage2.jpg" alt="Portal Image" class="img-responsive secondaryImage">
+        </div>
+    </div>
+    <h2 class="text-center mt-2 mb-4">Open Positons</h2>
+    <div>
+        {% for job  in jobs %}
+        {% include 'jobItem.html' %}
+        {% endfor %}
+    </div>
+    <div class="text-center">
+        <a href="mailto:abc@gmail.com?subject=Question about job openings" class="btn btn-primary btn-lg">Contact us</a>
+    </div>
+</div>
+
+{% endblock %}
